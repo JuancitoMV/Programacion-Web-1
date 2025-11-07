@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <tittle>Contacto-El Rincón Del Café</tittle>
+
+        
+    </head>
+    <body>
+        <header>
+            <h1>El Rincón Del Café</h1>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="contactos.html">Contactos</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Formulario de contacto</h2>
+            <form id="formContacto">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" maxlength="30" required>
+                <span class="error" id="errorNombre"></span>
+
+                <label>Email:</label>
+                <input type="text" id="email" required>
+                <span class="error" id="errorEmail"></span>
+
+                <label>Teléfono</label>
+                <input type="text" id="telefono" required>
+                <span class="error" id="errorTel"></span>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="resultado"></div>
+        </main>
+
+        <footer>
+            <p>@ 2025 El Rincón Del Café</p>
+        </footer>
+    </body>
+</html>
