@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <tittle>Contacto-El Rincón Del Café</tittle>
-
-        
+        <title>Contacto - El Rincón Del Café</title>
+        <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
         <header>
@@ -22,23 +21,24 @@
             <form id="formContacto">
                 <label>Nombre:</label>
                 <input type="text" id="nombre" maxlength="30" required>
-                <span class="error" id="errorNombre"></span>
+                <span class="error" id="errNombre"></span>
 
                 <label>Email:</label>
                 <input type="text" id="email" required>
-                <span class="error" id="errorEmail"></span>
+                <span class="error" id="errEmail"></span>
 
                 <label>Teléfono</label>
                 <input type="text" id="telefono" required>
-                <span class="error" id="errorTel"></span>
+                <span class="error" id="errTel"></span>
                 <button type="submit">Enviar</button>
             </form>
 
             <div id="resultado"></div>
         </main>
-
+        <script src="script.js"></script>
         <footer>
             <p>@ 2025 El Rincón Del Café</p>
         </footer>
+        
     </body>
 </html>
