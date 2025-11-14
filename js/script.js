@@ -1,4 +1,3 @@
-
 // CARRUSEL DE IMAGENES (página index)
 let imagenes = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
 let indexImg = 0;
@@ -20,7 +19,6 @@ if (imgCarrusel && btnNext && btnPrev) {
     });
 
 }
-
 
 // VALIDACION DEL FORMULARIO DE CONTACTO
 
@@ -92,5 +90,3 @@ function mostrarResultado(nombre, email, tel) {
     p.textContent = `Datos enviados correctamente: ${nombre} - ${email} - ${tel}`;
     div.appendChild(p);
 }
-
-
