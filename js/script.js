@@ -8,15 +8,18 @@ const btnNext = document.getElementById("next");
 const btnPrev = document.getElementById("prev");
 
 if (imgCarrusel && btnNext && btnPrev) {
-    btnNext.addEventListener("click",() => {
-    indexImg = (indexImg + 1) % imagenes.length;
-    imgCarrusel.src = imagenes[indexImg];
+
+    btnNext.addEventListener("click", () => {
+        indexImg = (indexImg + 1) % imagenes.length;
+        imgCarrusel.src = imagenes[indexImg];
     });
 
-    btnPrev.addEvenListener("click", () => {
-    indexImg = (imdexImg - 1 + imagenes.length) % imagenes.length;
-    imgCarrusel.src = imagenes[indexImg];
+    btnPrev.addEventListener("click", () => {
+        indexImg = (indexImg - 1 + imagenes.length) % imagenes.length;
+        imgCarrusel.src = imagenes[indexImg];
     });
+
+}
 
 
 // VALIDACION DEL FORMULARIO DE CONTACTO
@@ -81,10 +84,13 @@ function limpiarErrores() {
 // muestra los datos enviados debajo del formulario
 function mostrarResultado(nombre, email, tel) {
     const div = document.getElementById("resultado");
-    (if !div) return;
+    if (!div) return;
+
     div.innerHTML = "";
 
     const p = document.createElement("p");
     p.textContent = `Datos enviados correctamente: ${nombre} - ${email} - ${tel}`;
     div.appendChild(p);
 }
+
+
