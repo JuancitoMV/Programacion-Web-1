@@ -2,9 +2,9 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contacto - El Rincón Del Café</title>
-        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
         <header>
@@ -18,16 +18,16 @@
 
         <main>
             <h2>Formulario de contacto</h2>
-            <form id="formContacto">
-                <label>Nombre:</label>
+            <form id="formContacto" novalidate>
+                <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" maxlength="30" required>
                 <span class="error" id="errNombre"></span>
 
-                <label>Email:</label>
+                <label for="email">Email:</label>
                 <input type="text" id="email" required>
                 <span class="error" id="errEmail"></span>
 
-                <label>Teléfono</label>
+                <label for="telefono">Teléfono:</label>
                 <input type="text" id="telefono" required>
                 <span class="error" id="errTel"></span>
                 <button type="submit">Enviar</button>
@@ -35,10 +35,11 @@
 
             <div id="resultado"></div>
         </main>
-        <script src="script.js"></script>
+        
         <footer>
             <p>@ 2025 El Rincón Del Café</p>
         </footer>
-        
+        <script src="js/script.js"></script>
     </body>
 </html>
+
