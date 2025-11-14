@@ -1,27 +1,22 @@
 
 // CARRUSEL DE IMAGENES (página index)
 let imagenes = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
-let index = 0;
+let indexImg = 0;
 
 const imgCarrusel = document.getElementById("imagenCarrusel");
 const btnNext = document.getElementById("next");
 const btnPrev = document.getElementById("prev");
 
-if (imgCarrusel) {
-    btnNext.addEventListener("click", siguiente);
-    btnPrev.addEventListener("click", anterior);
+if (imgCarrusel && btnNext && btnPrev) {
+    btnNext.addEventListener("click",() => {
+    indexImg = (indexImg + 1) % imagenes.length;
+    imgCarrusel.src = imagenes[indexImg];
+    });
 
-    function siguiente() {
-        index = (index + 1) % imagenes.length;
-        imgCarrusel.src = imagenes[index];
-    }
-
-    function anterior() {
-        index = (index - 1 + imagenes.length) % imagenes.length;
-        imgCarrusel.src = imagenes[index];
-    }
-
-}
+    btnPrev.addEvenListener("click", () => {
+    indexImg = (imdexImg - 1 + imagenes.length) % imagenes.length;
+    imgCarrusel.src = imagenes[indexImg];
+    });
 
 
 // VALIDACION DEL FORMULARIO DE CONTACTO
@@ -51,8 +46,9 @@ if (form) {
         }
 
         // validacion del email 
-        if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
-            mostrarError("errEmail", "Correo mal escrito.");
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regexEmail.test(email)) {
+            mostrarError("errEmail", "Correo inválido.");
             valido = false;
         }
 
@@ -73,7 +69,8 @@ if (form) {
 
 // funcion para mostrar errores
 function mostrarError(id, mensaje) {
-    document.getElementById(id).textContent = mensaje;
+     const el = document.getElementById(id);
+    if(el) el.textContent = mensaje;
 }
 
 // limpia todos los mensajes de error
@@ -84,6 +81,7 @@ function limpiarErrores() {
 // muestra los datos enviados debajo del formulario
 function mostrarResultado(nombre, email, tel) {
     const div = document.getElementById("resultado");
+    (if !div) return;
     div.innerHTML = "";
 
     const p = document.createElement("p");
