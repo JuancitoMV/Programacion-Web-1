@@ -81,15 +81,32 @@ button:hover {
         text-align:center;
         box-shadow: 0 1px 3px rhba(0,0,0,0,08);
 }
+
+.producto img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
 input{
-    padding: 5px;
-    border: 1px solid #aaa;
+    padding: 8px;
+    border:1px solid #aaa;
     border-radius: 5px;
+    width:100%;
+    box-sizing: border-box;
+    margin-bottom: 6px;
 }
 
+label {
+    display:block;
+    margin-top:10px;
+    font-weight:600;
+}
 .error {
     color:red;
     font-size: 0.9em;
+    min-height: 18px;
+    display: block;
 }
 
 #resultado {
@@ -106,4 +123,5 @@ footer {
     margin-top: 20px;
 
 }
+
 
