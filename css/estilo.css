@@ -13,16 +13,10 @@ header {
     padding: 14px 10px;
 }
 .menu{
-    display: inline-block;
-    margin-top: 6px;
+    color: white;
+    text-decoration: underline;
 }
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin: 0 10px;
-    front-weight:600;
-}
 .menu a:hover{
     text-decoration: underline;
 }
@@ -31,12 +25,6 @@ main{
     padding: 20px;
 }
 
-.bienvenida p {
-    max-width:800px;
-    margin: 8px auto 20px;
-}
-
-/* Carrusel */
 .carrusel{
     text-align:Center;
     margin: 0 auto 20px:
@@ -123,5 +111,6 @@ footer {
     margin-top: 20px;
 
 }
+
 
 
